@@ -4,3 +4,9 @@ C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloE
 C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.csproj.CoreCompileInputs.cache
 C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.dll
 C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.pdb
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\bin\Debug\Ex05_OtheloEngien.dll
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\bin\Debug\Ex05_OtheloEngien.pdb
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.csprojAssemblyReference.cache
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.csproj.CoreCompileInputs.cache
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.dll
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.pdb

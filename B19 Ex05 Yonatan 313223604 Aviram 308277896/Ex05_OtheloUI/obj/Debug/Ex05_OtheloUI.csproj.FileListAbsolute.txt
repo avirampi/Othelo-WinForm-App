@@ -11,3 +11,16 @@ C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloU
 C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.CopyComplete
 C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.exe
 C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.pdb
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloUI.exe
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloUI.pdb
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloEngien.dll
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloEngien.pdb
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csprojAssemblyReference.cache
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.GameForm.resources
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.Properties.Resources.resources
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.FormGameSetting.resources
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.GenerateResource.cache
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.CoreCompileInputs.cache
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.CopyComplete
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.exe
+E:\computer science\שנה ב\סמסטר ב\תכנות מונחה עצמים בסביבת דוט-נט\b19 Ex_05\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.pdb

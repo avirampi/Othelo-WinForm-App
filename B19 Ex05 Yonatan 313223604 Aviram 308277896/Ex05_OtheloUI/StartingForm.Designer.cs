@@ -36,9 +36,10 @@
             // buttonPvC
             // 
             this.buttonPvC.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonPvC.Location = new System.Drawing.Point(12, 175);
+            this.buttonPvC.Location = new System.Drawing.Point(4, 73);
+            this.buttonPvC.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonPvC.Name = "buttonPvC";
-            this.buttonPvC.Size = new System.Drawing.Size(361, 97);
+            this.buttonPvC.Size = new System.Drawing.Size(143, 41);
             this.buttonPvC.TabIndex = 0;
             this.buttonPvC.Text = "Play Against The Computer";
             this.buttonPvC.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // buttonPvP
             // 
             this.buttonPvP.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonPvP.Location = new System.Drawing.Point(427, 175);
+            this.buttonPvP.Location = new System.Drawing.Point(149, 73);
+            this.buttonPvP.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonPvP.Name = "buttonPvP";
-            this.buttonPvP.Size = new System.Drawing.Size(361, 97);
+            this.buttonPvP.Size = new System.Drawing.Size(146, 41);
             this.buttonPvP.TabIndex = 1;
             this.buttonPvP.Text = "Play Against Your Friend";
             this.buttonPvP.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // buttonBoardSize
             // 
             this.buttonBoardSize.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonBoardSize.Location = new System.Drawing.Point(12, 48);
+            this.buttonBoardSize.Location = new System.Drawing.Point(4, 20);
+            this.buttonBoardSize.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.buttonBoardSize.Name = "buttonBoardSize";
-            this.buttonBoardSize.Size = new System.Drawing.Size(776, 97);
+            this.buttonBoardSize.Size = new System.Drawing.Size(291, 41);
             this.buttonBoardSize.TabIndex = 2;
             this.buttonBoardSize.Text = "Board Size 6x6 (click to change)";
             this.buttonBoardSize.UseVisualStyleBackColor = true;
@@ -68,14 +71,16 @@
             // 
             // FormGameSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 295);
+            this.ClientSize = new System.Drawing.Size(300, 124);
             this.Controls.Add(this.buttonBoardSize);
             this.Controls.Add(this.buttonPvP);
             this.Controls.Add(this.buttonPvC);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormGameSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Othello - Game Setting";
