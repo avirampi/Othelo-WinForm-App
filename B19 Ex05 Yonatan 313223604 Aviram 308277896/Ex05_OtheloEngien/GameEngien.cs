@@ -12,14 +12,16 @@ namespace Ex05_OtheloEngien
         private GameBoard.eBoardDemantions m_BoardSize;
         private GameBoard m_gameBoard;
         private List<Point> m_moveOptions = null;
-        private int m_player1Score = 0, m_player2Score = 0;
+        private int m_Player1Score = 0, m_Player2Score = 0;
 
         public ePlayers CurrentPlayer { get => m_CurrentPlayer; set => m_CurrentPlayer = value; }
+        public int Player1Score { get => m_Player1Score; set => m_Player1Score = value; }
+        public int Player2Score { get => m_Player2Score; set => m_Player2Score = value; }
 
         public delegate void MyAction<T, G>(T t1, G t2);
         public event Action<Point> Flip;
         public event MyAction<Point, ePlayers> Set;
-        public event Action<String> Error;
+        public event Action<String> GameOver;
 
         public GameEngien(eGameMode i_Mode, GameBoard.eBoardDemantions i_BoardSize)
         {
@@ -42,7 +44,7 @@ namespace Ex05_OtheloEngien
                 isNextPlayerIsAI = m_CurrentPlayer == ePlayers.SecondPlayer && m_Mode == eGameMode.PvC;
                 if (!m_gameBoard.IsThereOptionsToPlay(CurrentPlayer, ref m_moveOptions))
                 {
-                    onError("END");
+                    onGameOver("End");
                 }
             }
             return isNextPlayerIsAI;
@@ -61,20 +63,16 @@ namespace Ex05_OtheloEngien
 
         public void NextMove(Point i_userCordInput)
         {
-
             if (m_Mode == eGameMode.PvC && m_CurrentPlayer == ePlayers.SecondPlayer)
             {
                 i_userCordInput = m_PcAi.AiTurn(m_gameBoard, m_CurrentPlayer);
             }
+
             if (m_gameBoard.TryAddDiscToLocation(i_userCordInput.x, i_userCordInput.y, (Disc.eColors)m_CurrentPlayer))
             {
                 changePlayer();
 
-                m_gameBoard.CalcPlayersScore(out m_player1Score, out m_player2Score);
-            }
-            else
-            {
-                onError("WRONG CHOISE");
+                m_gameBoard.CalcPlayersScore(out m_Player1Score, out m_Player2Score);
             }
         }
         private void changePlayer()
@@ -116,9 +114,9 @@ namespace Ex05_OtheloEngien
         {
             Set.Invoke(i_PointToFlip, i_PlayerType);
         }
-        protected virtual void onError(String i_Massege)
+        protected virtual void onGameOver(String i_Massege)
         {
-            Error.Invoke(i_Massege);
+            GameOver.Invoke(i_Massege);
         }
     }
 

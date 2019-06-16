@@ -17,7 +17,8 @@ namespace Ex05_OtheloUI
         private int s_ButtonNameCounter = 0;
         private readonly Bitmap r_CoinRed = Ex05_OtheloUI.Properties.Resources.CoinRed;
         private readonly Bitmap r_CoinYellow = Ex05_OtheloUI.Properties.Resources.CoinYellow;
-
+        private int m_Player1Wins = 0;
+        private int m_Player2Wins = 0;
 
         public GameForm(int i_BoardSize, GameEngien.eGameMode i_GameSetting)
         {
@@ -31,9 +32,10 @@ namespace Ex05_OtheloUI
             m_GameEngien = new GameEngien(m_GameMode, m_BoardSize);
             m_GameEngien.Flip += buttonFlip;
             m_GameEngien.Set += buttonSet;
-            m_GameEngien.Error += error;
+            m_GameEngien.GameOver += gameOver;
             makeFirstLayout();
             m_GameEngien.ShowOptions();
+            this.Text = "Othello - Yellow's turn";
         }
 
         public bool Continue { get => m_KeepPlaying; set => m_KeepPlaying = value; }
@@ -42,6 +44,8 @@ namespace Ex05_OtheloUI
 
         private void makeFirstLayout()
         {
+            resetButtons();
+
             m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].BackgroundImage = r_CoinRed;
             m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -53,6 +57,17 @@ namespace Ex05_OtheloUI
 
             m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].BackgroundImage = r_CoinRed;
             m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].BackgroundImageLayout = ImageLayout.Stretch;
+        }
+
+        private void resetButtons()
+        {
+            for (int y = 0; y < (int)m_BoardSize; y++)
+            {
+                for (int x = 0; x < (int)m_BoardSize; x++)
+                {
+                    m_buttons[y, x].BackgroundImage = null;
+                }
+            }
         }
 
         private void setButtoms(int i_BoardSize)
@@ -125,9 +140,82 @@ namespace Ex05_OtheloUI
             }
         }
 
-        private void error(String i_Massege)
+        private void gameOver(string i_Messege)
         {
+            string msg;
+            msg = createEndMsg();
 
+            DialogResult dialogResult = MessageBox.Show(msg, "Othello", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (dialogResult == DialogResult.Yes)
+            {
+                restartGame();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+
+        private string createEndMsg()
+        {
+            string msg;
+            if (m_GameEngien.Player1Score > m_GameEngien.Player2Score)
+            {
+                m_Player1Wins++;
+                msg = string.Format(@"Yellow Won!! ({0}\{1}) ({2}\{3})
+Would you like another round?",
+                    m_GameEngien.Player1Score,
+                    m_GameEngien.Player2Score,
+                    m_Player1Wins,
+                    m_Player2Wins);
+            }
+            else if (m_GameEngien.Player1Score < m_GameEngien.Player2Score)
+            {
+                m_Player2Wins++;
+                msg = string.Format(@"Red Won!! ({0}\{1}) ({2}\{3})
+Would you like another round?",
+                    m_GameEngien.Player2Score,
+                    m_GameEngien.Player1Score,
+                    m_Player1Wins,
+                    m_Player2Wins);
+            }
+            else
+            {
+                msg = string.Format(@"Draw!! ({0}\{1}) ({2}\{3})
+Would you like another round?",
+                    m_GameEngien.Player1Score,
+                    m_GameEngien.Player2Score,
+                    m_Player1Wins,
+                    m_Player2Wins);
+            }
+
+            return msg;
+        }
+
+        private void restartGame()
+        {
+            m_GameEngien = new GameEngien(m_GameMode, m_BoardSize);
+            m_GameEngien.Flip += buttonFlip;
+            m_GameEngien.Set += buttonSet;
+            m_GameEngien.GameOver += gameOver;
+            makeFirstLayout();
+            m_GameEngien.ShowOptions();
+            this.Text = "Othello - Yellow's turn";
+        }
+
+        private void setTitle()
+        {
+            string title;
+            GameEngien.ePlayers currenPlayer = m_GameEngien.CurrentPlayer;
+            if (currenPlayer == GameEngien.ePlayers.FirstPlayer)
+            {
+                title = "Othello - Red's turn";
+            }
+            else
+            {
+                title = "Othello - Yellow's turn";
+            }
+            this.Text = title;
         }
 
         private void Buttons_Click(object sender, EventArgs e)
@@ -135,6 +223,18 @@ namespace Ex05_OtheloUI
             bool aiTurn = false;
             Ex05_OtheloEngien.Point location = null;
 
+            location = GetXyCord(sender, location);
+
+            do
+            {
+                setTitle();
+                m_GameEngien.NextMove(location);
+                aiTurn = m_GameEngien.ShowOptions();
+            } while (aiTurn);
+        }
+
+        private Ex05_OtheloEngien.Point GetXyCord(object sender, Ex05_OtheloEngien.Point location)
+        {
             for (int y = 0; y < (int)BoardSize; y++)
             {
                 for (int x = 0; x < (int)BoardSize; x++)
@@ -147,11 +247,7 @@ namespace Ex05_OtheloUI
                 }
             }
 
-            do
-            {
-                m_GameEngien.NextMove(location);
-                aiTurn = m_GameEngien.ShowOptions();
-            } while (aiTurn);
+            return location;
         }
     }
 }
