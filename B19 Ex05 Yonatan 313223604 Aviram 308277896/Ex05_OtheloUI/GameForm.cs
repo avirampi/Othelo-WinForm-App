@@ -15,6 +15,9 @@ namespace Ex05_OtheloUI
         private GameEngien.eGameMode m_GameMode;
         private readonly int m_FormSize;
         private int s_ButtonNameCounter = 0;
+        private readonly Bitmap r_CoinRed = Ex05_OtheloUI.Properties.Resources.CoinRed;
+        private readonly Bitmap r_CoinYellow = Ex05_OtheloUI.Properties.Resources.CoinYellow;
+
 
         public GameForm(int i_BoardSize, GameEngien.eGameMode i_GameSetting)
         {
@@ -39,21 +42,17 @@ namespace Ex05_OtheloUI
 
         private void makeFirstLayout()
         {
-            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].BackColor = Color.White;
-            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].Text = "O";
-            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].ForeColor = Color.Black;
+            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].BackgroundImage = r_CoinRed;
+            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2) - 1].BackgroundImageLayout = ImageLayout.Stretch;
 
-            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2)].BackColor = Color.Black;
-            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2)].Text = "O";
-            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2)].ForeColor = Color.White;
+            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2)].BackgroundImage = r_CoinYellow;
+            m_buttons[((int)m_BoardSize / 2) - 1, ((int)m_BoardSize / 2)].BackgroundImageLayout = ImageLayout.Stretch;
 
-            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2) - 1].BackColor = Color.Black;
-            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2) - 1].Text = "O";
-            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2) - 1].ForeColor = Color.White;
+            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2) - 1].BackgroundImage = r_CoinYellow;
+            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2) - 1].BackgroundImageLayout = ImageLayout.Stretch;
 
-            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].BackColor = Color.White;
-            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].Text = "O";
-            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].ForeColor = Color.Black;
+            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].BackgroundImage = r_CoinRed;
+            m_buttons[((int)m_BoardSize / 2), ((int)m_BoardSize / 2)].BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void setButtoms(int i_BoardSize)
@@ -69,7 +68,7 @@ namespace Ex05_OtheloUI
                     m_buttons[y, x].Top = this.Top + 10 + y * (m_buttons[y, x].Height);
                     m_buttons[y, x].Name = "Button" + s_ButtonNameCounter.ToString();
                     m_buttons[y, x].BackColor = Color.LightGray;
-                    // m_buttons[y, x].Enabled =false;
+                    m_buttons[y, x].Enabled = false;
                     m_buttons[y, x].Click += Buttons_Click;
 
                     Controls.Add(m_buttons[y, x]);
@@ -80,17 +79,15 @@ namespace Ex05_OtheloUI
 
         private void buttonFlip(Ex05_OtheloEngien.Point i_ButtonLocation)
         {
-            if (m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor == Color.Black)
+            if (m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImage == r_CoinYellow)
             {
-                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor = Color.White;
-                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].Text = "O";
-                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].ForeColor = Color.Black;
+                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImage = r_CoinRed;
+                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImageLayout = ImageLayout.Stretch;
             }
             else
             {
-                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor = Color.Black;
-                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].Text = "O";
-                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].ForeColor = Color.White;
+                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImage = r_CoinYellow;
+                m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImageLayout = ImageLayout.Stretch;
             }
         }
 
@@ -100,21 +97,20 @@ namespace Ex05_OtheloUI
             {
                 case GameEngien.ePlayers.FirstPlayer:
                     {
-                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor = Color.Black;
-                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].Text = "O";
-                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].ForeColor = Color.White;
+                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImage = r_CoinYellow;
+                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImageLayout = ImageLayout.Stretch;
                         break;
                     }
                 case GameEngien.ePlayers.SecondPlayer:
                     {
-                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor = Color.White;
-                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].Text = "O";
-                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].ForeColor = Color.Black;
+                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImage = r_CoinRed;
+                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackgroundImageLayout = ImageLayout.Stretch;
                         break;
                     }
                 case GameEngien.ePlayers.PossibleMove:
                     {
                         m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor = Color.Green;
+                        m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].Enabled = true;
                         break;
                     }
                 case GameEngien.ePlayers.Empty:
@@ -122,6 +118,7 @@ namespace Ex05_OtheloUI
                         if (m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor == Color.Green)
                         {
                             m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].BackColor = Color.LightGray;
+                            m_buttons[i_ButtonLocation.y, i_ButtonLocation.x].Enabled = false;
                         }
                         break;
                     }
@@ -135,6 +132,7 @@ namespace Ex05_OtheloUI
 
         private void Buttons_Click(object sender, EventArgs e)
         {
+            bool aiTurn = false;
             Ex05_OtheloEngien.Point location = null;
 
             for (int y = 0; y < (int)BoardSize; y++)
@@ -149,9 +147,11 @@ namespace Ex05_OtheloUI
                 }
             }
 
-            m_GameEngien.NextMove(location);
-            m_GameEngien.ShowOptions();
+            do
+            {
+                m_GameEngien.NextMove(location);
+                aiTurn = m_GameEngien.ShowOptions();
+            } while (aiTurn);
         }
-
     }
 }

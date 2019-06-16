@@ -25,24 +25,27 @@ namespace Ex05_OtheloEngien
         {
             m_Mode = i_Mode;
             m_BoardSize = i_BoardSize;
-            m_gameBoard = new GameBoard(i_BoardSize);
-            m_gameBoard.Error += onError;
+            m_gameBoard = new GameBoard(i_BoardSize, false);
             m_gameBoard.Flip += onFlip;
             m_gameBoard.Set += onSet;
         }
 
 
-        public void ShowOptions()
+        public bool ShowOptions()
         {
+            bool isNextPlayerIsAI;
+            isNextPlayerIsAI = m_CurrentPlayer == ePlayers.SecondPlayer && m_Mode == eGameMode.PvC;
             eraseLastOptions();
             if (!m_gameBoard.IsThereOptionsToPlay(CurrentPlayer, ref m_moveOptions))
             {
                 changePlayer();
+                isNextPlayerIsAI = m_CurrentPlayer == ePlayers.SecondPlayer && m_Mode == eGameMode.PvC;
                 if (!m_gameBoard.IsThereOptionsToPlay(CurrentPlayer, ref m_moveOptions))
                 {
                     onError("END");
                 }
             }
+            return isNextPlayerIsAI;
         }
 
         private void eraseLastOptions()
@@ -59,25 +62,14 @@ namespace Ex05_OtheloEngien
         public void NextMove(Point i_userCordInput)
         {
 
-            if (m_gameBoard.TryAddDiscToLocation(i_userCordInput.x, i_userCordInput.y, (Disc.eColors)CurrentPlayer))
+            if (m_Mode == eGameMode.PvC && m_CurrentPlayer == ePlayers.SecondPlayer)
+            {
+                i_userCordInput = m_PcAi.AiTurn(m_gameBoard, m_CurrentPlayer);
+            }
+            if (m_gameBoard.TryAddDiscToLocation(i_userCordInput.x, i_userCordInput.y, (Disc.eColors)m_CurrentPlayer))
             {
                 changePlayer();
-                if (m_Mode == eGameMode.PvC && CurrentPlayer == ePlayers.SecondPlayer && m_gameBoard.IsThereOptionsToPlay(CurrentPlayer, ref m_moveOptions))
-                {
-                    i_userCordInput = m_PcAi.AiTurn(m_gameBoard, CurrentPlayer);
-                    if (m_gameBoard.TryAddDiscToLocation(i_userCordInput.x, i_userCordInput.y, (Disc.eColors)CurrentPlayer))
-                    {
-                        changePlayer();
-                    }
-                    else
-                    {
-                        onError("Wrong Choise");
-                    }
-                }
-                else
-                {
-                    changePlayer();
-                }
+
                 m_gameBoard.CalcPlayersScore(out m_player1Score, out m_player2Score);
             }
             else

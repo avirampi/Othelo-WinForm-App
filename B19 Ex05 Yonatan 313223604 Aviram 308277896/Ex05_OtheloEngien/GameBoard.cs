@@ -11,10 +11,10 @@ namespace Ex05_OtheloEngien
         private Disc[,] m_BoardMatrix;
         public event Action<Point> Flip;
         public event GameEngien.MyAction<Point, GameEngien.ePlayers> Set;
-        public event Action<String> Error;
-
-        public GameBoard(eBoardDemantions i_BoardSize)
+        private bool m_isCreatedFromAI;
+        public GameBoard(eBoardDemantions i_BoardSize, bool i_createdFromAi)
         {
+            m_isCreatedFromAI = i_createdFromAi;
             m_Size = (int)i_BoardSize;
             m_BoardMatrix = new Disc[m_Size, m_Size];
             m_BoardMatrix[(m_Size / 2) - 1, (m_Size / 2) - 1] = new Disc(Disc.eColors.White, new Point((m_Size / 2) - 1, (m_Size / 2) - 1));
@@ -330,7 +330,10 @@ namespace Ex05_OtheloEngien
                 while (CurrentDisc != null && CurrentDisc.Color != i_CorrentDisc.Color && isCordInsideBorders(i_CorrentDisc.Xargument, i_CorrentDisc.Yargument))
                 {
                     CurrentDisc.Flip();
-                    onFlip(new Point(xCord, yCord));
+                    if (!m_isCreatedFromAI)
+                    {
+                        onFlip(new Point(xCord, yCord));
+                    }
                     xCord += xCordToMove;
                     yCord += yCordToMove;
 
@@ -406,7 +409,10 @@ namespace Ex05_OtheloEngien
             if (leagalMove)
             {
                 BoardMatrix[i_Y, i_X] = new Disc(i_Color, new Point(i_X, i_Y));
-                onSet(new Point(i_X, i_Y), (GameEngien.ePlayers)i_Color);
+                if (!m_isCreatedFromAI)
+                {
+                    onSet(new Point(i_X, i_Y), (GameEngien.ePlayers)i_Color);
+                }
                 flipRelevantDiscs(BoardMatrix[i_Y, i_X], directionsToFlip);
             }
 
@@ -432,7 +438,10 @@ namespace Ex05_OtheloEngien
 
                         thereIsOption = true;
                         io_OptionalMoveToPlay.Add(new Point(j, i));
-                        onSet(new Point(j, i), GameEngien.ePlayers.PossibleMove);
+                        if (!m_isCreatedFromAI)
+                        {
+                            onSet(new Point(j, i), GameEngien.ePlayers.PossibleMove);
+                        }
                     }
                 }
             }
@@ -512,7 +521,7 @@ namespace Ex05_OtheloEngien
         //// use for ai sending dup of the board to rec
         public GameBoard BoardDuplicatewithNewPoint(GameBoard i_OldGameBoard, Point i_pointToAdd, GameEngien.ePlayers i_player)
         {
-            GameBoard newBoard = new GameBoard((eBoardDemantions) i_OldGameBoard.Size);
+            GameBoard newBoard = new GameBoard((eBoardDemantions)i_OldGameBoard.Size, true);
 
             for (int i = 0; i < i_OldGameBoard.Size; i++)
             {
@@ -542,12 +551,8 @@ namespace Ex05_OtheloEngien
         {
             Set.Invoke(i_PointToFlip, i_PlayerType);
         }
-        protected virtual void onError(String i_Massege)
-        {
-            Error.Invoke(i_Massege);
-        }
     }
-    
+
 }
 
 
