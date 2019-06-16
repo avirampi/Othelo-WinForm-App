@@ -1,0 +1,13 @@
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloUI.exe
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloUI.pdb
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloEngien.dll
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\bin\Debug\Ex05_OtheloEngien.pdb
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csprojAssemblyReference.cache
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.GameForm.resources
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.Properties.Resources.resources
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.FormGameSetting.resources
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.GenerateResource.cache
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.CoreCompileInputs.cache
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.csproj.CopyComplete
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.exe
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloUI\obj\Debug\Ex05_OtheloUI.pdb

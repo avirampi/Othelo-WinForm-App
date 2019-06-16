@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex05_OtheloEngien", "Ex05_OtheloEngien\Ex05_OtheloEngien.csproj", "{DEE551BA-8C55-4EA4-A778-CCCDB4080B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex05_OtheloUI", "Ex05_OtheloUI\Ex05_OtheloUI.csproj", "{A00E681F-84DF-4001-85D3-CE26326F6A0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEE551BA-8C55-4EA4-A778-CCCDB4080B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEE551BA-8C55-4EA4-A778-CCCDB4080B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEE551BA-8C55-4EA4-A778-CCCDB4080B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEE551BA-8C55-4EA4-A778-CCCDB4080B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A00E681F-84DF-4001-85D3-CE26326F6A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00E681F-84DF-4001-85D3-CE26326F6A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00E681F-84DF-4001-85D3-CE26326F6A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00E681F-84DF-4001-85D3-CE26326F6A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB78A657-066E-4752-803D-365E40131EE8}
+	EndGlobalSection
+EndGlobal

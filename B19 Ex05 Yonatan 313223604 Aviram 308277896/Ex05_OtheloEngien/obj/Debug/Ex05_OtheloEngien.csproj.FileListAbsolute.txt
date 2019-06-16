@@ -1,0 +1,6 @@
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\bin\Debug\Ex05_OtheloEngien.dll
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\bin\Debug\Ex05_OtheloEngien.pdb
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.csprojAssemblyReference.cache
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.csproj.CoreCompileInputs.cache
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.dll
+C:\Users\Aviram\Desktop\B19 Ex05 Yonatan 313223604 Aviram 308277896\Ex05_OtheloEngien\obj\Debug\Ex05_OtheloEngien.pdb
